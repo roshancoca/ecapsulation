@@ -1,0 +1,29 @@
+import java.util.Calendar;
+import java.util.Scanner;
+
+class ZodiacSign {
+    // Private member variables (Encapsulation)
+    private String name;
+    private int age;
+    private int birthYear;
+    private int birthMonth;
+    private String zodiacSign;
+    private String destiny;
+    private int luckyNumber;
+    private String loveLife;
+
+    // Constructor
+    public ZodiacSign(String name, int age, int birthMonth) {
+  this.name = name;
+        this.age = age;
+        this.birthMonth = birthMonth;
+        calculateBirthYear();
+        calculateZodiacSign();
+        setZodiacGuides();
+    }
+
+    private void calculateBirthYear() {
+        Calendar calendar = Calendar.getInstance();
+        int currentYear = calendar.get(Calendar.YEAR);
+        this.birthYear = currentYear - this.age;
+    }
