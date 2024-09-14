@@ -7,5 +7,5 @@
         System.out.println(" - Destiny: " + destiny);
         System.out.println(" - Lucky Number: " + luckyNumber);
         System.out.println(" - Love Life: " + loveLife);
-}
+    }
 }
