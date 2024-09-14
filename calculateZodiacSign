@@ -1,0 +1,44 @@
+private void calculateZodiacSign() {
+        switch (birthMonth) {
+            case 1: 
+                zodiacSign = (birthYear < 2000) ? "Capricorn" : "Aquarius";
+                break;
+            case 2: 
+                zodiacSign = (birthYear < 1999) ? "Aquarius" : "Pisces";
+                break;
+            case 3: 
+                zodiacSign = (birthYear < 2001) ? "Pisces" : "Aries";
+                break;
+ case 4: 
+                zodiacSign = (birthYear < 2000) ? "Aries" : "Taurus";
+                break;
+            case 5: 
+                zodiacSign = (birthYear < 2001) ? "Taurus" : "Gemini";
+                break;
+            case 6: 
+                zodiacSign = (birthYear < 2001) ? "Gemini" : "Cancer";
+                break;
+            case 7: 
+                zodiacSign = (birthYear < 2003) ? "Cancer" : "Leo";
+                break;
+            case 8: 
+                zodiacSign = (birthYear < 2003) ? "Leo" : "Virgo";
+                break;
+            case 9: 
+                zodiacSign = (birthYear < 2003) ? "Virgo" : "Libra";
+                break;
+            case 10: 
+                zodiacSign = (birthYear < 2003) ? "Libra" : "Scorpio";
+                break;
+            case 11: 
+                zodiacSign = (birthYear < 2002) ? "Scorpio" : "Sagittarius";
+                break;
+            case 12: 
+                zodiacSign = (birthYear < 2002) ? "Sagittarius" : "Capricorn";
+                break;
+            default:
+                zodiacSign = "Unknown";
+                break;
+        }
+    }
+   
