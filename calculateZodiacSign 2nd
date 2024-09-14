@@ -1,4 +1,11 @@
-private void calculateZodiacSign() {
+ private void calculateBirthYear() {
+        Calendar calendar = Calendar.getInstance();
+        int currentYear = calendar.get(Calendar.YEAR);
+        this.birthYear = currentYear - this.age;
+    }
+
+    // Method to calculate zodiac sign based on birth month and year
+    private void calculateZodiacSign() {
         switch (birthMonth) {
             case 1: 
                 zodiacSign = (birthYear < 2000) ? "Capricorn" : "Aquarius";
@@ -9,7 +16,7 @@ private void calculateZodiacSign() {
             case 3: 
                 zodiacSign = (birthYear < 2001) ? "Pisces" : "Aries";
                 break;
- case 4: 
+            case 4: 
                 zodiacSign = (birthYear < 2000) ? "Aries" : "Taurus";
                 break;
             case 5: 
@@ -41,4 +48,3 @@ private void calculateZodiacSign() {
                 break;
         }
     }
-   
