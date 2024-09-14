@@ -4,6 +4,7 @@ public class Main {
         boolean continueRunning = true;
 
         while (continueRunning) {
+           
             String name;
             int age = 0;
             int birthMonth = 0;
@@ -14,6 +15,7 @@ public class Main {
                 System.out.print("Enter your name: ");
                 name = scanner.nextLine();
                 if (name.matches("[a-zA-Z ]+")) {  
+                    break;
                 } else {
                     System.out.println("Invalid input. Please enter a valid name containing only letters and spaces.");
                 }
@@ -25,7 +27,7 @@ public class Main {
                 if (scanner.hasNextInt()) {
                     age = scanner.nextInt();
                     if (age > 0 && age < 120) {  
-                       
+                        validInput = true;
                     } else {
                         System.out.println("Please enter a valid age between 1 and 120.");
                     }
@@ -43,19 +45,26 @@ public class Main {
                 if (scanner.hasNextInt()) {
                     birthMonth = scanner.nextInt();
                     if (birthMonth >= 1 && birthMonth <= 12) {  
+                        validInput = true;
                     } else {
                         System.out.println("Please enter a valid birth month (1-12).");
                     }
                 } else {
                     System.out.println("Invalid input. Please enter a numeric month.");
-                    scanner.next();  
+                    scanner.next(); 
                 }
             }
 
+           
             scanner.nextLine();
+
+            
             ZodiacSign zodiac = new ZodiacSign(name, age, birthMonth);
+
+            
             zodiac.displayInfo();
 
+           
             while (true) {
                 System.out.print("Do you want to enter another person's information? (yes/no): ");
                 String response = scanner.nextLine().trim().toLowerCase();
