@@ -2,7 +2,6 @@ import java.util.Calendar;
 import java.util.Scanner;
 
 class ZodiacSign {
-    // Private member variables (Encapsulation)
     private String name;
     private int age;
     private int birthYear;
@@ -12,7 +11,7 @@ class ZodiacSign {
     private int luckyNumber;
     private String loveLife;
 
-    // Constructor
+   
     public ZodiacSign(String name, int age, int birthMonth) {
   this.name = name;
         this.age = age;
