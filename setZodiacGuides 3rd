@@ -1,4 +1,4 @@
- private void setZodiacGuides() {
+private void setZodiacGuides() {
         switch (zodiacSign) {
             case "Aries":
                 destiny = "Leader and pioneer";
@@ -50,7 +50,7 @@
                 luckyNumber = 10;
                 loveLife = "Loyal and committed";
                 break;
-           case "Aquarius":
+            case "Aquarius":
                 destiny = "Innovation and independence";
                 luckyNumber = 11;
                 loveLife = "Unique and unconventional";
