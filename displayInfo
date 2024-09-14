@@ -1,0 +1,11 @@
+ public void displayInfo() {
+        System.out.println("Your Name: " + name);
+        System.out.println("Your Age: " + age);
+        System.out.println("Date of Birth: " + birthMonth + "/" + birthYear);
+        System.out.println("Zodiac Sign: " + zodiacSign);
+        System.out.println("Zodiac Guides:");
+        System.out.println(" - Destiny: " + destiny);
+        System.out.println(" - Lucky Number: " + luckyNumber);
+        System.out.println(" - Love Life: " + loveLife);
+}
+}
