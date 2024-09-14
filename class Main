@@ -1,0 +1,80 @@
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean continueRunning = true;
+
+        while (continueRunning) {
+           
+            String name;
+            int age = 0;
+            int birthMonth = 0;
+            boolean validInput = false;
+
+           
+            while (true) {
+                System.out.print("Enter your name: ");
+                name = scanner.nextLine();
+                if (name.matches("[a-zA-Z ]+")) {  
+                    break;
+                } else {
+                    System.out.println("Invalid input. Please enter a valid name containing only letters and spaces.");
+                }
+            }
+
+  
+            while (!validInput) {
+                System.out.print("Enter your age: ");
+                if (scanner.hasNextInt()) {
+                    age = scanner.nextInt();
+                    if (age > 0 && age < 120) {  
+                    } else {
+                        System.out.println("Please enter a valid age between 1 and 120.");
+                    }
+                } else {
+                    System.out.println("Invalid input. Please enter a numeric age.");
+                    scanner.next(); }
+            }
+
+            validInput = false;  
+
+            
+            scanner.nextLine();
+
+            
+            while (!validInput) {
+                System.out.print("Enter your birth month (1-12): ");
+                if (scanner.hasNextInt()) {
+                    birthMonth = scanner.nextInt();
+                    if (birthMonth >= 1 && birthMonth <= 12) {  
+                    } else {
+                        System.out.println("Please enter a valid birth month (1-12).");
+                    }
+                } else {
+                    System.out.println("Invalid input. Please enter a numeric month.");
+                    scanner.next(); 
+                }
+            }
+            scanner.nextLine();
+            ZodiacSign zodiac = new ZodiacSign(name, age, birthMonth);
+            zodiac.displayInfo();
+
+          
+            while (true) {
+                System.out.print("Do you want to enter another person's information? (yes/no): ");
+                String response = scanner.nextLine().trim().toLowerCase();
+                if (response.equals("yes")) {
+                    break; 
+                } else if (response.equals("no")) {
+                    continueRunning = false;
+                    break;  
+                } else {
+                    System.out.println("Invalid input. Please enter 'yes' or 'no'.");
+                }
+            }
+        }
+
+        System.out.println("Thank you for using the Zodiac Sign information !");
+
+        scanner.close();
+    }
+}
