@@ -1,0 +1,69 @@
+ private void setZodiacGuides() {
+        switch (zodiacSign) {
+            case "Aries":
+                destiny = "Leader and pioneer";
+                luckyNumber = 9;
+                loveLife = "Adventurous and passionate";
+                break;
+            case "Taurus":
+                destiny = "Stability and dependability";
+                luckyNumber = 6;
+                loveLife = "Romantic and loyal";
+                break;
+            case "Gemini":
+                destiny = "Curiosity and communication";
+                luckyNumber = 5;
+                loveLife = "Flirty and fun-loving";
+                break;
+            case "Cancer":
+                destiny = "Nurturing and protective";
+                luckyNumber = 2;
+                loveLife = "Emotional and devoted";
+                break;
+            case "Leo":
+                destiny = "Ambitious and charismatic";
+                luckyNumber = 1;
+                loveLife = "Fiery and dramatic";
+                break;
+            case "Virgo":
+                destiny = "Practical and analytical";
+                luckyNumber = 7;
+                loveLife = "Caring and perfectionist";
+                break;
+            case "Libra":
+                destiny = "Harmony and balance";
+                luckyNumber = 4;
+                loveLife = "Charming and diplomatic";
+                break;
+            case "Scorpio":
+                destiny = "Power and transformation";
+                luckyNumber = 8;
+                loveLife = "Intense and passionate";
+                break;
+            case "Sagittarius":
+                destiny = "Exploration and freedom";
+                luckyNumber = 3;
+                loveLife = "Fun and adventurous";
+                break;
+            case "Capricorn":
+                destiny = "Discipline and responsibility";
+                luckyNumber = 10;
+                loveLife = "Loyal and committed";
+                break;
+           case "Aquarius":
+                destiny = "Innovation and independence";
+                luckyNumber = 11;
+                loveLife = "Unique and unconventional";
+                break;
+            case "Pisces":
+                destiny = "Compassion and creativity";
+                luckyNumber = 12;
+                loveLife = "Dreamy and emotional";
+                break;
+            default:
+                destiny = "Unknown";
+                luckyNumber = 0;
+                loveLife = "Unknown";
+                break;
+        }
+    }
